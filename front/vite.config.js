@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://your-backend-url.onrender.com', // Reemplaza esta URL con la URL de tu backend en Render
+        target: 'https://proyecto-m9kz.onrender.com', // Reemplaza esta URL con la URL de tu backend en Render
         changeOrigin: true,
         secure: false, // Si tu backend usa HTTPS, cambia esto a true
       },
