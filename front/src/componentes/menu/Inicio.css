@@ -1,0 +1,13 @@
+.inicio {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra horizontalmente */
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column; /* Coloca los posts en columna */
+    align-items: center; /* Centra horizontalmente cada post */
+    width: 100%; /* O un ancho específico si lo deseas */
+    max-width: 1000px; 
+}

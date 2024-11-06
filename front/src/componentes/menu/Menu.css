@@ -1,0 +1,36 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.menu{
+  background-color: #00ff80;
+}
+.menu ul{
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  /* padding-top: 1rem; */
+  padding: 2rem 0rem 1.2rem 0rem;
+}
+
+.menu a{
+  border: solid 2px grey;
+  padding: 0.5rem;
+  background-color: #a4978f;
+  border-top-left-radius: 1rem;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+.menu a:hover{
+  color: #5c8d67;
+  background-color: #333333;
+}
+.Button{
+  background-color: #E63946;
+}
+.Boton{
+  /* background-color: white; */
+  border-radius: 5px;
+}

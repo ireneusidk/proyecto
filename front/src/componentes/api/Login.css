@@ -1,0 +1,21 @@
+.pass{
+    margin-bottom: 30%;
+    padding-right: 3rem;
+}
+form input{
+    padding: 0.7rem;
+    border-radius: 5px;
+    margin-right: 0.2rem;
+}
+form button{
+    margin-left: 1rem;
+}
+h2{
+color: rgb(132, 105, 238);
+}
+/* .Button{
+    margin-right: 1rem;
+} */
+.Button1{
+    background-color: rgb(58, 58, 198);
+}
