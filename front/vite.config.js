@@ -1,14 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
   plugins: [react()],
   server: {
+    port: process.env.PORT || 4173, // Usa el puerto proporcionado por Render o el 4173 para desarrollo local
     proxy: {
       '/api': {
-        target: 'https://proyecto-m9kz.onrender.com', // Reemplaza esta URL con la URL de tu backend en Render
+        target: process.env.VITE_BACKEND_URL || 'https://proyecto-m9kz.onrender.com',
         changeOrigin: true,
-        secure: true, // Si tu backend usa HTTPS, cambia esto a true
+        secure: true,
       },
     },
   },
-})
+});
