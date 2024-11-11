@@ -6,9 +6,8 @@ const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
 const session = require('express-session');
 require('dotenv').config(); 
-app.use(express.json()); 
 const app = express();
-
+app.use(express.json()); 
 // Middleware
 app.use(cors({ origin: '*' })); // Permite solicitudes desde diferentes orígenes
 
