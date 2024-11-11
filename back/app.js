@@ -10,17 +10,16 @@ const app = express();
 app.use(express.json()); 
 // Middleware
 app.use(cors({
-  origin: 'https://proyecto-1-1qny.onrender.com', 
-  credentials: true  // Permite el envío de cookies desde el cliente
+  origin: 'https://proyecto-1-1qny.onrender.com',
+  credentials: true 
 }));
 
-//Configuración de la sesión
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true, 
   cookie: { 
-    secure: process.env.NODE_ENV === 'production', // Asegúrate de que solo se envíen cookies en HTTPS en producción
+    secure: process.env.NODE_ENV === 'production', 
     sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', 
   }
 }));
