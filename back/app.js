@@ -9,7 +9,7 @@ require('dotenv').config();
 const app = express();
 
 // Middleware
-app.use(cors(*); // Permite solicitudes desde diferentes orígenes
+app.use(cors({ origin: '*' })); // Permite solicitudes desde diferentes orígenes
 app.use(express.json()); 
 
 //Configuración de la sesión
