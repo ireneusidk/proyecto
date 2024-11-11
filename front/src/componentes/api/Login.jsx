@@ -17,9 +17,10 @@ const Login = () => {
       await api.post('/users/login', { username, password });
       login(); //Llama a login despues de un inicio de sesion exitoso
       navigate('/protegida');
-    } catch (error) {
-      alert('Error al registrar: ' + error.response.data);
-    }
+   } catch (error) {
+  const errorMessage = error.response?.data || error.message || 'Error desconocido';
+  alert('Error al iniciar sesión: ' + errorMessage);
+}
   };
 
   return (
