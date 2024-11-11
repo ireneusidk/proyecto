@@ -19,9 +19,11 @@ app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true, 
-  cookie: { secure: false }
+  cookie: { 
+    secure: process.env.NODE_ENV === 'production', // Asegúrate de que solo se envíen cookies en HTTPS en producción
+    sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax', 
+  }
 }));
-
 // Rutas
 // app.use('/api/hechizos', hechizosRoutes);
 app.use('/api/users', userRoutes);
