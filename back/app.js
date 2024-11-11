@@ -9,8 +9,10 @@ require('dotenv').config();
 const app = express();
 app.use(express.json()); 
 // Middleware
-app.use(cors({ origin: '*' })); // Permite solicitudes desde diferentes orígenes
-
+app.use(cors({
+  origin: 'https://proyecto-1-1qny.onrender.com', 
+  credentials: true  // Permite el envío de cookies desde el cliente
+}));
 
 //Configuración de la sesión
 app.use(session({
