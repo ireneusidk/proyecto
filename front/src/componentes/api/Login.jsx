@@ -16,7 +16,7 @@ const Login = () => {
     try {
       await api.post('/users/login', { username, password });
       login(); //Llama a login despues de un inicio de sesion exitoso
-      navigate('/protegida');
+      navigate('/profile');
    } catch (error) {
   const errorMessage = error.response?.data || error.message || 'Error desconocido';
   alert('Error al iniciar sesión: ' + errorMessage);
